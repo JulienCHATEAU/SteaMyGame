@@ -27,24 +27,24 @@ Ou de double-cliquer sur le raccourci (SteaMyGame.lnk).
 
 # Les mécaniques du jeu
 
-Pour jouer à ce jeu vous devez vous créer un compte avec un login et un mot de passe (à ne pas oublier).
+   Pour jouer à ce jeu vous devez vous créer un compte avec un login et un mot de passe (à ne pas oublier).
 Lorsque vous vous connectez à votre compte pour la première fois, vous devez choisir un personnage parmi les 30 disponibles.
 
-**VOUS NE POUVEZ PAS CHANGER DE PERSONNAGE APRÈS VOTRE CHOIX**
+**/!\\ VOUS NE POUVEZ PAS CHANGER DE PERSONNAGE APRÈS VOTRE CHOIX /!\\**
 
-Après une longue réflexion (aidé par le guide des personnages plus bas) et après avoir fait votre choix, vous arrivez sur l'interface de l'inventaire.
+   Après une longue réflexion (aidé par le guide des personnages plus bas) et après avoir fait votre choix, vous arrivez sur l'interface de l'inventaire.
 Le jeu peut commencer !!
 
 
-## Synopsis, déroulement et règles du jeu
-    Après un voyage de plusieurs jours, vous arrivez devant la gigantesque Tour Celeste. Vous avez été envoyé par le roi de votre village pour vaincre Imleryth,
+### Synopsis, déroulement et règles du jeu
+   Après un voyage de plusieurs jours, vous arrivez devant la gigantesque Tour Celeste. Vous avez été envoyé par le roi de votre village pour vaincre Imleryth,
 le démon de glace, qui est sur le point de ravager votre monde depuis le haut de cette tour. Cependant cela ne va pas être chose facile car il vous
 faudra d'abord gravir les 50 étages de cette tour. De plus, durant votre voyage vous avez été attaqué par un groupe de bandit qui vous a dérobé tout votre
 équipement. Vous allez donc commencer votre ascenssion sans rien dans les poches. Chaque étages est composées de 3 salles et d'un monstre par salle.
 Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se déroulent en tour par tour.
 
 
-## La Tour :
+### La Tour :
 * Dès que vous battez un monstre vous gagnez des $teamy, l'argent du jeu.
 * Si vous perdez ou abandonnez un combat, vous perdez de l'argent et devez recommencer tout l'étage.
 * Si vous battez les 3 monstres d'un étage à la suite, vous gagnez une rune (voir explication sur les runes plus bas).
@@ -53,7 +53,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Vous ne pouvez refaire que les 3 derniers étages que vous avez vaincu et gagnerez deux fois moins de $teamy. Le drop de rune est quant à lui identique.
 
 
-## Les Runes :
+### Les Runes :
 * Vous pouvez équiper jusqu'a 5 runes.
 * Vous pouvez vendre une rune contre des $teamy.
 * Dans l'inventaire une rune aura un affichage du style : TypePosition (ex : R3 décrit une rune Rage de position 3)
@@ -88,7 +88,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
     * 4 : Att, Hp, Def, Att%, Hp%, Def%
 
 
-## Les Personnages :
+### Les Personnages :
 * Un personnage possède les 6 caractéristiques précédement vu.
 * La valeur de ses caractéristiques varie en fonction du type du personnage.
 * Un personnage possède 4 sorts ayant un cooldown (nombre de tours sans pouvoir utiliser un sort après utilisation) qui se réduit chaque tour.
@@ -96,7 +96,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Les sorts peuvent appliquer à l'ennemi des effets nocifs et vous procurer des effets bénéfiques, détaillés ci dessous.
 
 
-## Les Effets Nocifs (appliqué pendant 1 à 3 tours sur la cible) :
+### Les Effets Nocifs (appliqué pendant 1 à 3 tours sur la cible) :
 * Break Att : Réduit l'attaque.
 * Break Def : Réduit la défense.
 * Break Spd : Réduit la vitesse.
@@ -107,7 +107,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Bombe : 2 tours après application, inflige des dégats et étourdis avec 35%.
 * Degats Continus : Chaque tour, inflige des dégats équivalents à 5% des points de vie.
 
-## Les Effets Bénéfiques (appliqué pendant 1 à 3 tours sur la cible):
+### Les Effets Bénéfiques (appliqué pendant 1 à 3 tours sur la cible):
 * Buff Att : Augmente l'attaque.
 * Buff Def : Augmente la défense.
 * Buff Spd : Augmente la vitesse.
