@@ -7,11 +7,12 @@ _Ce document est à lire attentivement et vous permettra de comprendre le foncti
 
 Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait de la manière suivante :
 
-$javac -cp bin -d bin -encoding UTF-8 src/X/\*.java (avec X le répertoire dans lequel se trouve la(les) classe(s) que vous avez modifiée(s))
+`$javac -cp bin -d bin -encoding UTF-8 src/X/\*.java`  
+(avec X le répertoire dans lequel se trouve la(les) classe(s) que vous avez modifiée(s))
 
 Pour compiler tous les fichiers d'un coup (possible seulement sur Linux) :  
-$shopt -s globstar
-$javac -cp bin -d bin -encoding UTF-8 src/\*\*/\*.java
+`$shopt -s globstar`
+`$javac -cp bin -d bin -encoding UTF-8 src/\*\*/\*.java`
 
 
 
@@ -19,7 +20,7 @@ $javac -cp bin -d bin -encoding UTF-8 src/\*\*/\*.java
 # Le lancement du jeu
 
 Pour lancer le jeu il suffit d'exécuter la commande suivant :  
-$java -cp bin application.Application  
+`$java -cp bin application.Application`
 
 Ou de double-cliquer sur le raccourci (SteaMyGame.lnk).
 
@@ -28,11 +29,8 @@ Ou de double-cliquer sur le raccourci (SteaMyGame.lnk).
 
 Pour jouer à ce jeu vous devez vous créer un compte avec un login et un mot de passe (à ne pas oublier).
 Lorsque vous vous connectez à votre compte pour la première fois, vous devez choisir un personnage parmi les 30 disponibles.
-                           /\
-                          / |\
-                         /  | \     
-                        /\___°\_\_\
-VOUS NE POUVEZ PAS CHANGER DE PERSONNAGE APRÈS VOTRE CHOIX
+
+**VOUS NE POUVEZ PAS CHANGER DE PERSONNAGE APRÈS VOTRE CHOIX**
 
 Après une longue réflexion (aidé par le guide des personnages plus bas) et après avoir fait votre choix, vous arrivez sur l'interface de l'inventaire.
 Le jeu peut commencer !!
