@@ -729,13 +729,39 @@ public void miseAJourPBA() {
 //METHODES PANEL BAS SORT//
 //***********************//
 public void miseAJourPBS() {
+  Color beige = Color.decode("#C3C1BF");
+  Color beigePlusFonce = Color.decode("#866F6F");
   Personnage p = this.getJoueurCourant();
   this.label_pbs.setText("     Quel sort voulez-vous lancez "+this.jeu.getCompte().getLogin()+"? ("+p.getClass().getName().substring(11)+")");
   this.bouton_pbs1.setText(p.getNomSort(1) + " ("+p.getCooldown(0)+")");
   this.bouton_pbs2.setText(p.getNomSort(2) + " ("+p.getCooldown(1)+")");
   this.bouton_pbs3.setText(p.getNomSort(3) + " ("+p.getCooldown(2)+")");
   this.bouton_pbs4.setText(p.getNomSort(4) + " ("+p.getCooldown(3)+")");
-  if (!p.getPossedePassif()) {
+  if (p.getCooldown(0) > 0) {
+    this.bouton_pbs1.setEnabled(false);
+    this.bouton_pbs1.setBackground(beigePlusFonce);
+  } else {
+    this.bouton_pbs1.setEnabled(true);
+    this.bouton_pbs1.setBackground(beige);
+  }
+  if (p.getCooldown(1) > 0) {
+    this.bouton_pbs2.setEnabled(false);
+    this.bouton_pbs2.setBackground(beigePlusFonce);
+  } else {
+    this.bouton_pbs2.setEnabled(true);
+    this.bouton_pbs2.setBackground(beige);
+  }
+  if (p.getCooldown(2) > 0) {
+    this.bouton_pbs3.setEnabled(false);
+    this.bouton_pbs3.setBackground(beigePlusFonce);
+  } else {
+    this.bouton_pbs3.setEnabled(true);
+    this.bouton_pbs3.setBackground(beige);
+  }
+  if (p.getCooldown(3) > 0) {
+    this.bouton_pbs4.setEnabled(false);
+    this.bouton_pbs4.setBackground(beigePlusFonce);
+  } else if (!p.getPossedePassif()) {
     this.bouton_pbs4.setEnabled(true);
   if (p instanceof Sige) {
     if (p.getSort4Active() == 0) {
@@ -746,9 +772,12 @@ public void miseAJourPBS() {
   }
   // this.bouton_pbs4.removeActionListener(this.c1);
   // this.bouton_pbs4.addActionListener(this.c1);
-  } else {
+  } else if (p.getPossedePassif()) {
     this.disableBouton4();
   // this.bouton_pbs4.removeActionListener(this.c1);
+  } else {
+    this.bouton_pbs4.setEnabled(true);
+    this.bouton_pbs4.setBackground(beige);
   }
 }
 

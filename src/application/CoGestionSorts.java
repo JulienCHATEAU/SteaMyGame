@@ -513,7 +513,8 @@ if (!stop && lanceur.getPdv() != 0) {
     }
   }
 } else {//sort en cooldown
-  Combat.ajouterCommentaire("-"+lanceur.getNomSort(sortChoisis)+" est en cooldown !!");
+  // Combat.ajouterCommentaire("-"+lanceur.getNomSort(sortChoisis)+" est en cooldown !!");
+  // this.c2.afficherCommentaires();
   this.c2.fenetreN(2);
 }
 
