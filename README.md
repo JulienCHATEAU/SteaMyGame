@@ -36,9 +36,8 @@ Après une longue réflexion (aidé par le guide des personnages plus bas) et ap
 Le jeu peut commencer !!
 
 
-## Synopsis, déroulement et règles du jeu :
-
-  Après un voyage de plusieurs jours, vous arrivez devant la gigantesque Tour Celeste. Vous avez été envoyé par le roi de votre village pour vaincre Imleryth,
+## Synopsis, déroulement et règles du jeu
+    Après un voyage de plusieurs jours, vous arrivez devant la gigantesque Tour Celeste. Vous avez été envoyé par le roi de votre village pour vaincre Imleryth,
 le démon de glace, qui est sur le point de ravager votre monde depuis le haut de cette tour. Cependant cela ne va pas être chose facile car il vous
 faudra d'abord gravir les 50 étages de cette tour. De plus, durant votre voyage vous avez été attaqué par un groupe de bandit qui vous a dérobé tout votre
 équipement. Vous allez donc commencer votre ascenssion sans rien dans les poches. Chaque étages est composées de 3 salles et d'un monstre par salle.
@@ -60,33 +59,33 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Dans l'inventaire une rune aura un affichage du style : TypePosition (ex : R3 décrit une rune Rage de position 3)
 * Une rune peut être positionnée de 5 façons différentes (en position 0, 1, 2, 3 ou 4).
 * Il existe 6 types de runes différents ayant leur propre bonus :
-      * Fatale (+20% d'attaque)
-      * Energie (+20% de point de vie)
-      * Gardien (+20% de défense)
-      * Swift (+22% de vitesse)
-      * Rage (+26% de dégats critiques)
-      * Lame (+12% de taux critiques)
+    * Fatale (+20% d'attaque)
+    * Energie (+20% de point de vie)
+    * Gardien (+20% de défense)
+    * Swift (+22% de vitesse)
+    * Rage (+26% de dégats critiques)
+    * Lame (+12% de taux critiques)
 * Si une rune est en position 0, le bonus est activé une fois.
 * Sinon le bonus est activé en équipant 2 runes du même type sur les autres positions (cumulable 2 fois => 3 fois max en tout).
 * Une rune possède un stat principale (détail de la stat principal en fonction de la position plus bas) et de 1 à 4 stats secondaires.
 * Les stats existantes (flat et/ou en %) sont :
-      * L'attaque (flat et en %) --> Att/Att%
-      * La défense (flat et en %) --> Def/Def%
-      * Les points de vie (flat et en %) --> Hp/Hp%
-      * La vitesse (flat) --> Vit
-      * Les dégats critiques (en %) --> Dgts crit.
-      * Les taux de critiques --> Tx crit.
+    * L'attaque (flat et en %) --> Att/Att%
+    * La défense (flat et en %) --> Def/Def%
+    * Les points de vie (flat et en %) --> Hp/Hp%
+    * La vitesse (flat) --> Vit
+    * Les dégats critiques (en %) --> Dgts crit.
+    * Les taux de critiques --> Tx crit.
 * Initialement un rune possède 1 stat principale et 1 stat secondaire.
 * Un rune possède aussi un niveau allant de 1 à 20 et peut être amélioré contre des $teamy.
 * Chaque amélioration augmente un peu la stat principale.
 * Tout les 5 niveaux vous gagnez une stat secondaire aléatoire supplémentaire.
 * Si vous atteignez le niveau maximum d'une rune, ses stats secondaires seront augmentées de 50%.
 * Les stats principales possibles en fonction de la position de la rune :
-      * 0 : Toutes
-      * 1 : Att, Hp, Def
-      * 2 : Att%, Hp%, Def%, Vit
-      * 3 : Tx crit, Dgts crit, Att%, Hp%, Def%
-      * 4 : Att, Hp, Def, Att%, Hp%, Def%
+    * 0 : Toutes
+    * 1 : Att, Hp, Def
+    * 2 : Att%, Hp%, Def%, Vit
+    * 3 : Tx crit, Dgts crit, Att%, Hp%, Def%
+    * 4 : Att, Hp, Def, Att%, Hp%, Def%
 
 
 ## Les Personnages :
