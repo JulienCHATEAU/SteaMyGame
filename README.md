@@ -19,7 +19,7 @@ Pour compiler tous les fichiers d'un coup (possible seulement sur Linux) :
 
 # Le lancement du jeu
 
-Pour lancer le jeu il suffit d'exécuter la commande suivant :  
+Pour lancer le jeu il suffit d'exécuter la commande suivante :  
 `$java -cp bin application.Application`
 
 Ou de double-cliquer sur le raccourci (SteaMyGame.lnk).
@@ -32,7 +32,7 @@ Lorsque vous vous connectez à votre compte pour la première fois, vous devez c
 
 **/!\\ VOUS NE POUVEZ PAS CHANGER DE PERSONNAGE APRÈS VOTRE CHOIX /!\\**
 
-Après une longue réflexion (aidé par le guide des personnages plus bas) et après avoir fait votre choix, vous arrivez sur l'interface de l'inventaire.
+Après une longue réflexion (aidée par le guide des personnages plus bas) et après avoir fait votre choix, vous arrivez sur l'interface de l'inventaire.
 Le jeu peut commencer !!
 
 
@@ -40,7 +40,7 @@ Le jeu peut commencer !!
 Après un voyage de plusieurs jours, vous arrivez devant la gigantesque **Tour Celeste**. Vous avez été envoyé par le roi de votre village pour vaincre Imleryth,
 le démon de glace, qui est sur le point de ravager votre monde depuis le haut de cette tour. Cependant cela ne va pas être chose facile car il vous
 faudra d'abord gravir les 50 étages de cette tour. De plus, durant votre voyage vous avez été attaqué par un groupe de bandit qui vous a dérobé tout votre
-équipement. Vous allez donc commencer votre ascenssion sans rien dans les poches. Chaque étages est composées de 3 salles et d'un monstre par salle.
+équipement. Vous allez donc commencer votre ascenssion sans rien dans les poches (ou peut-être pas). Chaque étages est composées de 3 salles et d'un monstre par salle.
 Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se déroulent en tour par tour.
 
 
@@ -50,13 +50,12 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Si vous battez les 3 monstres d'un étage à la suite, vous gagnez une rune (voir explication sur les runes plus bas).
 * Entre chaque salle vous regagnez 75% de vos points de vie manquant.
 * Tous les 10 étages les monstres sont plus fort que la normale et vous gagnerez une rune supplémentaire à la première victoire.
-* Vous ne pouvez refaire que les 3 derniers étages que vous avez vaincu et gagnerez deux fois moins de $teamy. Le drop de rune est quant à lui identique.
+* Vous ne pouvez refaire que les 4 derniers étages que vous avez vaincu et gagnerez deux fois moins de $teamy. Le drop de rune est quant à lui identique.
 
 
 ### Les Runes :
 * Vous pouvez équiper jusqu'a 5 runes.
 * Vous pouvez vendre une rune contre des $teamy.
-* Dans l'inventaire une rune aura un affichage du style : TypePosition (ex : R3 décrit une rune Rage de position 3)
 * Une rune peut être positionnée de 5 façons différentes (en position 0, 1, 2, 3 ou 4).
 * Il existe 6 types de runes différents ayant leur propre bonus :
     * **Fatale** (+20% d'attaque)
@@ -67,6 +66,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
     * **Lame** (+12% de taux critiques)
 * Si une rune est en position 0, le bonus est activé une fois.
 * Sinon le bonus est activé en équipant 2 runes du même type sur les autres positions (cumulable 2 fois => 3 fois max en tout).
+* Dans l'inventaire une rune aura un affichage du style : TypePosition (ex : R3 décrit une rune Rage de position 3)
 * Une rune possède un stat principale (détail de la stat principal en fonction de la position plus bas) et de 1 à 4 stats secondaires.
 * Les stats existantes (flat et/ou en %) sont :
     * **L'attaque** (flat et en %) --> Att/Att%
@@ -79,7 +79,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Un rune possède aussi un niveau allant de 1 à 20 et peut être amélioré contre des $teamy.
 * Chaque amélioration augmente un peu la stat principale.
 * Tout les 5 niveaux vous gagnez une stat secondaire aléatoire supplémentaire.
-* Si vous atteignez le niveau maximum d'une rune, ses stats secondaires seront augmentées de 50%.
+* Si vous atteignez le niveau maximum d'une rune, totues ses stats secondaires seront augmentées de 50%.
 * Les stats principales possibles en fonction de la position de la rune :
     * **0** : Toutes
     * **1** : Att, Hp, Def
@@ -116,5 +116,5 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * **Invincibilité** : Vous ne subissez aucun dégat.
 * **Contre-Attaque** : Si vous subissez des dégats (directs) de l'ennemi, vous contre-attaquez avec votre sort n°1.
 
-PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me le partager, je me ferai un plaisir de le corriger 
+PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me le partager, je me ferai un plaisir de le corriger
 `steamygamecontact@gmail.com`
