@@ -761,8 +761,18 @@ public void miseAJourPBS() {
   if (p.getCooldown(3) > 0) {
     this.bouton_pbs4.setEnabled(false);
     this.bouton_pbs4.setBackground(beigePlusFonce);
-  } else if (!p.getPossedePassif()) {
+  } else {
     this.bouton_pbs4.setEnabled(true);
+    this.bouton_pbs4.setBackground(beige);
+  }
+  if (!p.getPossedePassif()) {
+    if (p.getCooldown(3) > 0) {
+      this.bouton_pbs4.setEnabled(false);
+      this.bouton_pbs4.setBackground(beigePlusFonce);
+    } else {
+      this.bouton_pbs4.setEnabled(true);
+      this.bouton_pbs4.setBackground(beige);
+    }
   if (p instanceof Sige) {
     if (p.getSort4Active() == 0) {
       this.bouton_pbs4.setEnabled(false);
@@ -770,13 +780,8 @@ public void miseAJourPBS() {
       this.bouton_pbs4.setEnabled(true);
     }
   }
-  // this.bouton_pbs4.removeActionListener(this.c1);
-  // this.bouton_pbs4.addActionListener(this.c1);
   } else if (p.getPossedePassif()) {
-    this.disableBouton4();
-  // this.bouton_pbs4.removeActionListener(this.c1);
-  } else {
-    this.bouton_pbs4.setEnabled(true);
+    this.bouton_pbs4.setEnabled(false);
     this.bouton_pbs4.setBackground(beige);
   }
 }
