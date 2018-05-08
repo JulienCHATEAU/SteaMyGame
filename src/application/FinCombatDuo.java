@@ -53,7 +53,7 @@ public class FinCombatDuo extends JFrame {
     JPanel rec = new JPanel();
     rec.setBackground(Color.decode("#F2E5CF"));
     JLabel recomp = new JLabel();
-    int argent = 650 + etage * 20 + r.nextInt(100);
+    int argent = 650 + etage * 10 + r.nextInt(100);
     if (victoire) {
       if (etage < jeu.getCompte().getEtage()) {
         argent /= (2+(jeu.getCompte().getEtage()-etage)/10);

@@ -92,9 +92,8 @@ public class Thrain extends Personnage {
       }
     }
     if (cibles[1].nbrDegatsContinus() > 0) {
-      degatseffectue[0] += cibles[1].nbrDegatsContinus()*this.getAttaque()*15/100;
-      cibles[1].appliquerEffet(new Etourdissement(1), 80);
-      boolean etourdis2 = cibles[0].appliquerEffet(new Etourdissement(1), 80);
+      degatseffectue[1] += cibles[1].nbrDegatsContinus()*this.getAttaque()*15/100;
+      boolean etourdis2 = cibles[1].appliquerEffet(new Etourdissement(1), 80);
       if (etourdis2) {
         tourBuffAttaque++;
       }

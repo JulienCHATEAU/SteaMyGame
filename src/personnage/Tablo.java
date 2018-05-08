@@ -119,9 +119,9 @@ public class Tablo extends Personnage {
     int lancer1 = r.nextInt(6)+1;
     int allie = r.nextInt(2);
     if (allie == 0) {
-      ennemisCibles[1].lancerDeSort4(lancer1);
+      cibles[1].lancerDeSort4(lancer1);
     } else {
-      ennemisCibles[0].lancerDeSort4(lancer1);
+      cibles[0].lancerDeSort4(lancer1);
     }
     Combat.ajouterCommentaire("-Tablo a lancé 1 dés et a obtenu un "+lancer1);
     return degatseffectue;

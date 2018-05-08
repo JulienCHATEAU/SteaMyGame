@@ -14,3 +14,6 @@ Auteur : Julien CHATEAU
 ## 08/05/2018
 * Les caractéristiques de tous les personnages de la tour ont été diminuée de 10%
 * L'argent gagné lors d'une victoire d'un étage a été augmenté
+* Nephthys : Les dégats du skill n°2 on été légerement baissés
+* Thrain : correction d'un bug à cause duquel le nombre de tour du buff attaque accordé via le skill n°4 de correspondait pas au nombre d'ennemis stuns
+* Tablo : correction d'un bug à cause duquel les effets bénéfiques procurés par le passif était appliqué sur les ennemis et non sur les alliés
