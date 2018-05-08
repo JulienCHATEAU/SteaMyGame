@@ -60,8 +60,8 @@ public class Nephthys extends Personnage {
     degatseffectue[0] = 0;
     degatseffectue[1] = 0;
     for (int i = 0; i<3; i++) {
-      degatseffectue[0] += this.getAttaque()*20/100 + this.getPdvMax()*3/100 - cibles[0].getDefense()/10;
-      degatseffectue[1] += this.getAttaque()*20/100 + this.getPdvMax()*3/100 - cibles[1].getDefense()/10;
+      degatseffectue[0] += this.getAttaque()*20/100 + this.getPdvMax()*2/100 - cibles[0].getDefense()/10;
+      degatseffectue[1] += this.getAttaque()*20/100 + this.getPdvMax()*2/100 - cibles[1].getDefense()/10;
       if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
         cibles[0].appliquerEffet(new BreakDefense(2));
         bd--;

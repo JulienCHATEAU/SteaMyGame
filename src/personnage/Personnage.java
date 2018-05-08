@@ -994,6 +994,10 @@ public abstract class Personnage {
     return this;
   }
 
+  public void malusParceQueTropFort() {
+    this.malusPremiersNiveaux(8);
+  }
+
   public void reajusteCaracFinCombat() {
     if (this.shield != 0) {
       this.shield = 0;

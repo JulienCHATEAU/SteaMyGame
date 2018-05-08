@@ -150,6 +150,16 @@ public class TourCeleste {
       //   System.out.println("___________________________________");
       // }
 
+      Personnage p;
+      for (int i = 0; i<etagesdispo; i++) {
+       for (int j = 1; j<7; j++) {
+         p = this.tour[i].getPersoSalle(j);
+         if (p != null) {
+           p.malusParceQueTropFort();
+         }
+       }
+     }
+
 
 
 
