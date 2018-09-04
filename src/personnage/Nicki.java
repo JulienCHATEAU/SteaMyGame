@@ -278,6 +278,6 @@ public class Nicki extends Personnage {
   *@return la description du sort n°1 de Nicki
   */
   public String descriptionSort4() {
-    return "Ton ange gardien augmente ton attaque pendant 3 tours puis envoye une rafale de 5 attaques sur les ennemis, attaques qui auront 15% de chance d'empêcher les ennemis de se soigner pendant 3 tours (cooldown = "+this.cooldown_max4+")";
+    return "Ton ange gardien augmente ton attaque pendant 3 tours puis envoye une rafale de 5 attaques sur les ennemis, attaques qui auront 15% de chance chacunes d'empêcher les ennemis de se soigner pendant 3 tours (cooldown = "+this.cooldown_max4+")";
   }
 }

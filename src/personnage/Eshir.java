@@ -66,7 +66,7 @@ public class Eshir extends Personnage {
   */
   public int[] sort3(Personnage[] cibles, Personnage[] ennemisCibles) {
     int[] degatseffectue = new int[2];
-    degatseffectue[0] = this.getAttaque()*80/100 + this.getPdvMax()*16/100 + this.sort4(cibles, ennemisCibles)[0] - cibles[0].getDefense()*30/100;
+    degatseffectue[0] = this.getAttaque()*85/100 + this.getPdvMax()*12/100 + this.sort4(cibles, ennemisCibles)[0] - cibles[0].getDefense()*30/100;
     for (int i = 0; i<4; i++) {
       EffetBenefique.clean(cibles[0], 50);
     }
@@ -83,7 +83,7 @@ public class Eshir extends Personnage {
     int[] degatseffectue = new int[2];
     degatseffectue[0] = 0;
     if (this.getPdv() > cibles[0].getPdv()) {
-      degatseffectue[0] = (this.getPdv()-cibles[0].getPdv())/5 + this.getPdv()*3/100;
+      degatseffectue[0] = (this.getPdv()-cibles[0].getPdv())/5;
     }
     return degatseffectue;
   }
@@ -194,6 +194,6 @@ public class Eshir extends Personnage {
   *@return la description du sort n°1 de Eshir
   */
   public String descriptionSort4() {
-    return "Si tes points de vie actuels sont superieur à ceux de l'ennemi, tes attaques infligeront des dégats supplémentaires équivalent à une partie de la différence entre vos points de vie plus une partie de tes points de vie maximums";
+    return "Si tes points de vie actuels sont superieur à ceux de l'ennemi, tes attaques infligeront des dégats supplémentaires équivalent à une partie de la différence entre vos points de vie";
   }
 }

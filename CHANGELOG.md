@@ -17,3 +17,8 @@ Auteur : Julien CHATEAU
 * Nephthys : Les dégats du skill n°2 on été légerement baissés
 * Thrain : correction d'un bug à cause duquel le nombre de tour du buff attaque accordé via le skill n°4 de correspondait pas au nombre d'ennemis stuns
 * Tablo : correction d'un bug à cause duquel les effets bénéfiques procurés par le passif était appliqué sur les ennemis et non sur les alliés
+
+## 13/05/2018
+* Eshir :
+    * Le passif n'accorde plus de dégats supplémentaires en fonction des points de vie actuels d'Eshir. Ces dégats supplémentaires ne dépendent plus que de la différence de points de vie avec la cible
+    * Les dégats du sort n°3 dépendent un peu moins des points de vie maximum mais plus de l'attaque.

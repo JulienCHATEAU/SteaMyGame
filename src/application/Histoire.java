@@ -10,7 +10,7 @@ import java.nio.file.*;
 public class Histoire extends JPanel {
 
   private Jeu jeu;
-  private JTextArea findujeu;
+  private JTextArea dialogue;
 
   public Histoire(Jeu jeu, int i) {
     super();
@@ -19,15 +19,15 @@ public class Histoire extends JPanel {
     this.setLayout(new BorderLayout());
     Font font25 = new Font("Arial", Font.BOLD ,25);
     Font font20 = new Font("Arial", Font.BOLD ,20);
-    this.findujeu = new JTextArea();
-    this.findujeu.setFont(font20);
-    this.findujeu.setText("\n\n"+Application.getTextFromFile("data/histoire"+i+".txt"));
-    this.findujeu.setBackground(Color.decode("#F2E5CF"));
-    this.findujeu.setBorder(BorderFactory.createMatteBorder(0, 0, 8, 0, Color.decode("#C3C1BF")));
-    this.findujeu.setLineWrap(true);
-    this.findujeu.setWrapStyleWord(true);
-    this.findujeu.setEditable(false);
-    this.findujeu.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
+    this.dialogue = new JTextArea();
+    this.dialogue.setFont(font20);
+    this.dialogue.setBackground(Color.decode("#F2E5CF"));
+    this.dialogue.setText("\n\n"+Application.getTextFromFile("data/histoire"+i+".txt"));
+    this.dialogue.setBorder(BorderFactory.createMatteBorder(0, 0, 8, 0, Color.decode("#C3C1BF")));
+    this.dialogue.setLineWrap(true);
+    this.dialogue.setWrapStyleWord(true);
+    this.dialogue.setEditable(false);
+    this.dialogue.setBorder(BorderFactory.createEmptyBorder(0, 30, 0, 30));
     JPanel tmp = new JPanel();
     tmp.setPreferredSize(new Dimension(this.jeu.getPreferredSize().width, 75));
     tmp.setLayout(new GridBagLayout());
@@ -71,18 +71,19 @@ public class Histoire extends JPanel {
       });
     }
     tmp.add(continuer);
-    this.add(this.findujeu, BorderLayout.CENTER);
+    this.add(this.dialogue, BorderLayout.CENTER);
     this.add(tmp, BorderLayout.SOUTH);
   }
 
   public void ajouterQuatriemePerso(String str) {
-    String texte = this.findujeu.getText();
+    String texte = this.dialogue.getText();
     texte = texte.replace("*", str);
     texte = texte.replace("*", str);
-    this.findujeu.setText(texte);
+    this.dialogue.setText(texte);
   }
 
   public void ajouterPerso(String str) {
-    this.findujeu.append(" "+str);
+    this.dialogue.setText("\n\n"+Application.getTextFromFile("data/histoire2.txt"));
+    this.dialogue.append(" "+str);
   }
 }

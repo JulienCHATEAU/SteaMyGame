@@ -118,12 +118,12 @@ public class Tablo extends Personnage {
     Random r = new Random();
     int lancer1 = r.nextInt(6)+1;
     int allie = r.nextInt(2);
-    if (allie == 0) {
-      cibles[1].lancerDeSort4(lancer1);
-    } else {
+    if (allie == 0 && !(cibles[1] instanceof Poutch)) {
       cibles[0].lancerDeSort4(lancer1);
+    } else {
+      this.lancerDeSort4(lancer1);
     }
-    Combat.ajouterCommentaire("-Tablo a lancé 1 dés et a obtenu un "+lancer1);
+    Combat.ajouterCommentaire("-Tablo a lancé 1 dé et a obtenu un "+lancer1);
     return degatseffectue;
   }
 
@@ -230,7 +230,7 @@ public class Tablo extends Personnage {
   *@return la description du sort n°1 de Tablo
   */
   public String descriptionSort4() {
-    return "Lance un dé au début de chaque tour, ce qui procures à un alliés choisis aléatoirement un des effets suivants en fonction du chiffre obtenu : 1 -> Immunite (2 tours), 2 -> Buff Attaque (2 tours), 3 -> Buff Défense (2 tours), 4 -> Buff Vitesse (2 tours), 5 -> Régénération (2 tours),  6 -> Soin (15% des HP max)";
+    return "Lance un dé au début de chaque tour, ce qui procures à un allié choisis aléatoirement un des effets suivants en fonction du chiffre obtenu : 1 -> Immunite (2 tours), 2 -> Buff Attaque (2 tours), 3 -> Buff Défense (2 tours), 4 -> Buff Vitesse (2 tours), 5 -> Régénération (2 tours),  6 -> Soin (15% des HP max)";
   }
 
 
