@@ -2,6 +2,9 @@ Auteur : Julien CHATEAU
 
 _Ce document est à lire attentivement et vous permettra de comprendre le fonctionnement de ce jeu._
 
+# Prérequis
+
+Vous devez posséder la version la plus récente de Java, téléchargeable [ici](https://www.java.com/fr/download/)
 
 # La compilation
 
