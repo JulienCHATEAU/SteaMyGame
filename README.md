@@ -2,11 +2,13 @@ Auteur : Julien CHATEAU
 
 _Ce document est à lire attentivement et vous permettra de comprendre le fonctionnement de ce jeu._
 
+__SteaMyGame__
+
 # Prérequis
 
 Vous devez posséder la version la plus récente de Java, téléchargeable [ici](https://www.java.com/fr/download/)
 
-# La compilation
+## La compilation
 
 Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait de la manière suivante :
 
@@ -20,7 +22,7 @@ Pour compiler tous les fichiers d'un coup (possible seulement sur Linux) :
 
 
 
-# Le lancement du jeu
+## Le lancement du jeu
 
 Pour lancer le jeu il suffit d'exécuter la commande suivante :  
 `$java -cp bin application.Application`
@@ -28,7 +30,7 @@ Pour lancer le jeu il suffit d'exécuter la commande suivante :
 Ou de double-cliquer sur le raccourci (SteaMyGame.lnk).
 
 
-# Les mécaniques du jeu
+## Les mécaniques du jeu
 
    Pour jouer à ce jeu vous devez vous créer un compte avec un login et un mot de passe (à ne pas oublier).
 Lorsque vous vous connectez à votre compte pour la première fois, vous devez choisir un personnage parmi les 32 disponibles.
