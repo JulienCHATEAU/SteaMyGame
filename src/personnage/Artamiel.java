@@ -43,7 +43,7 @@ public class Artamiel extends Personnage {
 */
   public int[] sort1(Personnage[] cibles, Personnage[] ennemisCibles) {
     int[] degatseffectue = new int[2];
-    degatseffectue[0] = this.getAttaque()*75/100 - cibles[0].getDefense()*30/100;
+    degatseffectue[0] = this.getAttaque()*65/100 + this.getDefense()*10/100 - cibles[0].getDefense()*30/100;
     EffetBenefique.clean(cibles[0], 100);
     return degatseffectue;
   }
@@ -70,7 +70,7 @@ public class Artamiel extends Personnage {
   public int[] sort3(Personnage[] cibles, Personnage[] ennemisCibles) {
     int[] degatseffectue = new int[2];
     degatseffectue[0] = 10000;
-    cibles[0].heal(this.getPdvMax()*55/100);
+    cibles[0].heal(this.getPdvMax()*50/100);
     this.setCooldown(2, this.cooldown_max3);
     return degatseffectue;
   }
@@ -85,6 +85,8 @@ public class Artamiel extends Personnage {
     cibles[1].cleanToutLesEffetNocif();
     cibles[0].appliquerEffet(new Immunite(3));
     cibles[1].appliquerEffet(new Immunite(3));
+    cibles[0].appliquerEffet(new BuffVitesse(1));
+    cibles[1].appliquerEffet(new BuffVitesse(1));
     this.setCooldown(3, this.cooldown_max4);
     return degatseffectue;
   }
@@ -177,20 +179,20 @@ public class Artamiel extends Personnage {
   *@return la description du sort n°1 de Artamiel
   */
   public String descriptionSort2() {
-    return "Réduit les cooldowns de votre allié à zéro ou augmente votre défense pendant 2 tours en infligeant des dégats au ennemis. Les effets de ce sort diffère en fonction de la cible (cooldown = "+this.cooldown_max2+")";
+    return "Si lancé sur un allié, réduit le cooldown de ses sorts à zéro. Si lancé sur vous même, augmente votre défense pendant 2 tours puis inflige des dégats aux ennemis. (cooldown = "+this.cooldown_max2+")";
   }
 
   /**Méthode qui permet de décrire le sort n°1 de Artamiel
   *@return la description du sort n°1 de Artamiel
   */
   public  String descriptionSort3() {
-    return "Effectue une danse qui soigne les alliés d'un pourcentage de tes points de vie maximums (cooldown = "+this.cooldown_max3+")";
+    return "Une eau bénite des dieux soigne l'allié ciblé d'un pourcentage de ses points de vie maximums (cooldown = "+this.cooldown_max3+")";
   }
 
   /**Méthode qui permet de décrire le sort n°1 de Artamiel
   *@return la description du sort n°1 de Artamiel
   */
   public String descriptionSort4() {
-    return "Supprime les effets nocifs des alliés et leur accorde l'immunité pendant 3 tours (cooldown = "+this.cooldown_max4+")";
+    return "Supprime les effets nocifs des alliés, leur accorde l'immunité pendant 3 tours et augmente leur vitesse pendant 1 tour (cooldown = "+this.cooldown_max4+")";
   }
 }

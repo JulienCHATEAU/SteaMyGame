@@ -20,5 +20,21 @@ Auteur : Julien CHATEAU
 
 ## 13/05/2018
 * Eshir :
-    * Le passif n'accorde plus de dégats supplémentaires en fonction des points de vie actuels d'Eshir. Ces dégats supplémentaires ne dépendent plus que de la différence de points de vie avec la cible
+    * Le passif n'accorde plus que des dégats supplémentaire en fonction de la différence de points de vie entre eshir et la cible
     * Les dégats du sort n°3 dépendent un peu moins des points de vie maximum mais plus de l'attaque.
+
+## 04/09/2018
+* Correction de certaines fautes d'orthographes et de génération de texte dans les parties narratives du jeu
+* Tablo : Le passif applique correctement les effets bénéfiques sur les alliés et non sur les ennemis
+
+## 05/09/2018
+* Thebae :
+    * Le sort n°3 soigne correctement de 50% des dégats infligés et non de 75%
+    * Chacune des attaques du sort n°2 n'a plus que 35% de chance d'appliquer un marque sur l'ennemi
+* Artamiel :
+    * La description du sort n°2 a été ajusté
+    * Le montant de soin procuré par le sort n°3 passe de 55% à 50% des points de vie maximums de l'allié ciblé.
+    * Le sort n°4 augmente désormait la vitesse des alliés pendant 1 tour en plus des précédentes fonctionnalités
+    * Une partie des dégats du sort n°1 dépende de la défense d'Artamiel
+* Chasun :
+    * L'IA du sort n°4 a été amélioré

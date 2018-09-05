@@ -57,8 +57,8 @@ public class Thebae extends Personnage {
     degatseffectue[0] = this.getAttaque()*40/100 + this.getPdv()*20/100 + (cibles[0].getPdvMax()-cibles[0].getPdv())*8/100 - cibles[0].getDefense()*30/100;
     degatseffectue[1] = this.getAttaque()*40/100 + this.getPdv()*20/100 + (cibles[1].getPdvMax()-cibles[1].getPdv())*8/100 - cibles[1].getDefense()*30/100;
     for (int i = 0; i<3; i++) {
-      cibles[0].appliquerEffet(new Marque(2), 50);
-      cibles[1].appliquerEffet(new Marque(2), 50);
+      cibles[0].appliquerEffet(new Marque(2), 35);
+      cibles[1].appliquerEffet(new Marque(2), 35);
     }
     this.setCooldown(1, this.cooldown_max2);
     return degatseffectue;
@@ -71,7 +71,7 @@ public class Thebae extends Personnage {
     int[] degatseffectue = new int[2];
     degatseffectue[0] = this.getAttaque()*50/100 + this.getPdvMax()*15/100 - cibles[0].getDefense()*30/100;
     if (this.getPdv() <= this.getPdvMax()*30/100) {
-      this.volDeVie(degatseffectue[0], cibles[0], 75);
+      this.volDeVie(degatseffectue[0], cibles[0], 50);
     }
     this.setCooldown(2, this.cooldown_max3);
     return degatseffectue;
@@ -176,7 +176,7 @@ public class Thebae extends Personnage {
   *@return la description du sort n°1 de Thebae
   */
   public String descriptionSort2() {
-    return "Impose ta royauté en frappant 3 fois chaque ennemi avec pour chaque attaque 50% de chance de leur appliquer un effet de marque. Les dégats augmente à mesure que les points de vie de l'ennemi baissent (cooldown = "+this.cooldown_max2+")";
+    return "Impose ta royauté en frappant 3 fois chaque ennemi avec pour chaque attaque 35% de chance de leur appliquer un effet de marque. Les dégats augmente à mesure que les points de vie de l'ennemi baissent (cooldown = "+this.cooldown_max2+")";
   }
 
   /**Méthode qui permet de décrire le sort n°1 de Thebae

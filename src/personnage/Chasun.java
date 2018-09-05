@@ -123,10 +123,10 @@ public class Chasun extends Personnage {
     if (this.possedeEffet(sil)) {//si silence
       cibleSort[1] = 1;//sort 1
     } else if (allieLanceur.nbrEffetsNocifs() >= 1 && allieLanceur.getPdv() != 0 && this.cooldown[3] == 0) {//si allié possède plus de 1 effets nocifs
-      cibleSort[0] = 4;
+      cibleSort[0] = 3;
       cibleSort[1] = 4;//sort 4
-    } else if (allieLanceur.getPdv() < allieLanceur.getPdvMax()*35/100 && this.cooldown[3] == 0) {
-      cibleSort[0] = 4;
+    } else if (allieLanceur.getPdv() < allieLanceur.getPdvMax()*65/100 && this.cooldown[3] == 0) {
+      cibleSort[0] = 3;
       cibleSort[1] = 4;//sort 4
     } else if (allieLanceur.getPdv() < allieLanceur.getPdvMax()*50/100 && !this.possedeEffet(new AntiHeal(0)) && allieLanceur.getPdv() != 0 && !allieLanceur.possedeEffet(new AntiHeal(0)) && this.cooldown[2] == 0) {//si allié a moins de 50% de ses Hp max et pas KO et pas anti-heal
       cibleSort[0] = 3;
@@ -136,12 +136,15 @@ public class Chasun extends Personnage {
       cibleSort[1] = 3;//sort 3
     } else if (this.cooldown[1] == 0) {//sinon
       cibleSort[1] = 2;//sort 2
-    } else if (this.cooldown[3] == 0) {//sinon
-      cibleSort[0] = 4;
+    } else if (this.cooldown[3] == 0 && allieLanceur.getPdv() != 0) {//sinon
+      cibleSort[0] = 3;
       cibleSort[1] = 4;//sort 4
     } else if (this.cooldown[2] == 0) {//sinon
       cibleSort[0] = 3;
       cibleSort[1] = 3;//sort 3
+    } else if (this.cooldown[3] == 0) {//sinon
+      cibleSort[0] = 4;
+      cibleSort[1] = 4;//sort 4
     } else {//si vraiment
       cibleSort[1] = 1;//sort 1
     }
@@ -184,7 +187,7 @@ public class Chasun extends Personnage {
   *@return la description du sort n°1 de Chasun
   */
   public  String descriptionSort3() {
-    return "Effectue une danse qui soigne les alliés d'un pourcentage de tes points de vie maximums (cooldown = "+this.cooldown_max3+")";
+    return "Effectue une danse qui soigne les alliés d'un pourcentage de tes points de vie maximums et augmente leur attaque pendant 2 tours (cooldown = "+this.cooldown_max3+")";
   }
 
   /**Méthode qui permet de décrire le sort n°1 de Chasun
