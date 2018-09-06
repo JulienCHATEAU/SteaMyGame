@@ -38,3 +38,9 @@ Auteur : Julien CHATEAU
     * Une partie des dégats du sort n°1 dépende de la défense d'Artamiel
 * Chasun :
     * L'IA du sort n°4 a été amélioré
+
+## 06/09/2018
+* Correction d'un bug à cause duquel lorsque l'on choisissait un sort autre que le n°1 en étant sous effet de silence, l'alerte "*\*Nom_Du_Personnage\** est silence !!" dans le chat n'apparraissait pas.
+* Correction d'un bug à cause duquel un personnage KO pouvait recevoir des points de bouclier
+* Thebae :
+    * L'affichage de la resistance de l'effet de Marque du sort n°2 a été factoriser pour une meilleur visibilité dans le chat
