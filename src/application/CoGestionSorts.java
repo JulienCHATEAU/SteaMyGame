@@ -132,7 +132,7 @@ if (!stop && lanceur.getPdv() != 0) {
   if (lanceur.possedeEffet(new Silence(0)) && sortChoisis != 1) {//lanceur silence et sort différent du premier
     Combat.ajouterCommentaire("-"+lanceur.getClass().getName().substring(11)+" est silence !!");
     this.c2.fenetreN(2);
-    Combat.ajouterCommentaire(" ");
+    this.c2.afficherCommentaires();
   } else {// tout est ok
 
     if (cooldownSortChoisis == 0) {//sort pas en cooldown

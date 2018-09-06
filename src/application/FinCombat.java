@@ -300,8 +300,10 @@ public class FinCombat extends JFrame {
   public void nonVente(Rune r) {
     if (this.drop2.getRune().equals(r)) {
       this.drop2.setEnabled(false);
+      this.drop2.setText("/");
     } else {
       this.drop1.setEnabled(false);
+      this.drop1.setText("/");
     }
   }
 

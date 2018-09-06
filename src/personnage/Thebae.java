@@ -19,6 +19,7 @@ import effet.effetbenefique.benefiqueprofit.*;
 
 import effet.effettour.*;
 import effet.*;
+import application.Combat;
 import java.util.*;
 
 
@@ -56,9 +57,24 @@ public class Thebae extends Personnage {
     int[] degatseffectue = new int[2];
     degatseffectue[0] = this.getAttaque()*40/100 + this.getPdv()*20/100 + (cibles[0].getPdvMax()-cibles[0].getPdv())*8/100 - cibles[0].getDefense()*30/100;
     degatseffectue[1] = this.getAttaque()*40/100 + this.getPdv()*20/100 + (cibles[1].getPdvMax()-cibles[1].getPdv())*8/100 - cibles[1].getDefense()*30/100;
+    boolean resistanceCible0 = true;
+    boolean resistanceCible1 = true;
+    Random r = new Random();
     for (int i = 0; i<3; i++) {
-      cibles[0].appliquerEffet(new Marque(2), 35);
-      cibles[1].appliquerEffet(new Marque(2), 35);
+      if (r.nextInt(100) < 35) {
+        cibles[0].appliquerEffet(new Marque(2));
+        resistanceCible0 = false;
+      }
+      if (r.nextInt(100) < 35) {
+        cibles[1].appliquerEffet(new Marque(2));
+        resistanceCible1 = false;
+      }
+    }
+    if (resistanceCible0) {
+      Combat.ajouterCommentaire("-"+cibles[0].getClass().getName().substring(11)+" a résisté aux 3 effets nocifs");
+    }
+    if (resistanceCible1) {
+      Combat.ajouterCommentaire("-"+cibles[1].getClass().getName().substring(11)+" a résisté aux 3 effets nocifs");
     }
     this.setCooldown(1, this.cooldown_max2);
     return degatseffectue;

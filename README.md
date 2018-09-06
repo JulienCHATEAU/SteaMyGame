@@ -64,7 +64,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Une rune peut être positionnée de 5 façons différentes (en position 0, 1, 2, 3 ou 4).
 * Il existe 6 types de runes différents ayant leur propre bonus :
     * **Fatale** (+20% d'attaque)
-    * **Energie** (+20% de point de vie)
+    * **Energie** (+20% de points de vie)
     * **Gardien** (+20% de défense)
     * **Swift** (+22% de vitesse)
     * **Rage** (+26% de dégats critiques)

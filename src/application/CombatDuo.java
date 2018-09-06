@@ -597,12 +597,12 @@ public CombatDuo(Jeu jeu) {
 
   public void miseAJourPC() {
     this.placerFleche();
-    if (this.p[0].getShield() > 0) {
+    if (this.p[0].getPdv() > 0 && this.p[0].getShield() > 0) {
       this.info_p.setText(this.p[0].getClass().getName().substring(11)+"      "+this.p[0].getPdv()+"/"+this.p[0].getPdvMax()+"   ["+this.p[0].getShield()+"]");
     } else {
       this.info_p.setText(this.p[0].getClass().getName().substring(11)+"      "+this.p[0].getPdv()+"/"+this.p[0].getPdvMax());
     }
-    if (this.ia[0].getShield() > 0) {
+    if (this.ia[0].getPdv() > 0 && this.ia[0].getShield() > 0) {
       this.info_ia.setText(this.ia[0].getClass().getName().substring(11)+"      "+this.ia[0].getPdv()+"/"+this.ia[0].getPdvMax()+"   ["+this.ia[0].getShield()+"]");
     } else {
       this.info_ia.setText(this.ia[0].getClass().getName().substring(11)+"      "+this.ia[0].getPdv()+"/"+this.ia[0].getPdvMax());
@@ -621,12 +621,12 @@ public CombatDuo(Jeu jeu) {
     this.bdv_ia.setV(this.ia[0]);
 
 
-    if (this.p[1].getShield() > 0) {
+    if (this.p[1].getPdv() > 0 && this.p[1].getShield() > 0) {
       this.info_p2.setText(this.p[1].getClass().getName().substring(11)+"      "+this.p[1].getPdv()+"/"+this.p[1].getPdvMax()+"   ["+this.p[1].getShield()+"]");
     } else {
       this.info_p2.setText(this.p[1].getClass().getName().substring(11)+"      "+this.p[1].getPdv()+"/"+this.p[1].getPdvMax());
     }
-    if (this.ia[1].getShield() > 0) {
+    if (this.ia[1].getPdv() > 0 && this.ia[1].getShield() > 0) {
       this.info_ia2.setText(this.ia[1].getClass().getName().substring(11)+"      "+this.ia[1].getPdv()+"/"+this.ia[1].getPdvMax()+"   ["+this.ia[1].getShield()+"]");
     } else {
       this.info_ia2.setText(this.ia[1].getClass().getName().substring(11)+"      "+this.ia[1].getPdv()+"/"+this.ia[1].getPdvMax());
