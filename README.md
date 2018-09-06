@@ -55,7 +55,7 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * Si vous battez les 3 monstres d'un étage à la suite, vous gagnez une rune (voir explication sur les runes plus bas).
 * Entre chaque salle vous regagnez 75% de vos points de vie manquant.
 * Tous les 10 étages les monstres sont plus fort que la normale et vous gagnerez une rune supplémentaire à la première victoire.
-* Vous ne pouvez refaire que les 4 derniers étages que vous avez vaincu et gagnerez deux fois moins de $teamy. Le drop de rune est quant à lui identique.
+* Vous ne pouvez refaire que les 4 derniers étages que vous avez vaincu et gagnerez deux fois moins de $teamy.
 
 
 ### Les Runes :
