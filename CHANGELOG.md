@@ -15,7 +15,7 @@ Auteur : Julien CHATEAU
 * Les caractéristiques de tous les personnages de la tour ont été diminuée de 10%
 * L'argent gagné lors d'une victoire d'un étage a été augmenté
 * Nephthys : Les dégats du skill n°2 on été légerement baissés
-* Thrain : correction d'un bug à cause duquel le nombre de tour du buff attaque accordé via le skill n°4 de correspondait pas au nombre d'ennemis stuns
+* Thrain : correction d'un bug à cause duquel le nombre de tour du boost d'attaque accordé par le skill n°4 de correspondait pas au nombre d'ennemis étourdis
 * Tablo : correction d'un bug à cause duquel les effets bénéfiques procurés par le passif était appliqué sur les ennemis et non sur les alliés
 
 ## 13/05/2018
@@ -24,13 +24,12 @@ Auteur : Julien CHATEAU
     * Les dégats du sort n°3 dépendent un peu moins des points de vie maximum mais plus de l'attaque.
 
 ## 04/09/2018
-* Correction de certaines fautes d'orthographes et de génération de texte dans les parties narratives du jeu
-* Tablo : Le passif applique correctement les effets bénéfiques sur les alliés et non sur les ennemis
+* Correction de certaines fautes d'orthographes et de certaines génération de texte incorrecte dans les parties narratives du jeu
 
 ## 05/09/2018
 * Thebae :
     * Le sort n°3 soigne correctement de 50% des dégats infligés et non de 75%
-    * Chacune des attaques du sort n°2 n'a plus que 35% de chance d'appliquer un marque sur l'ennemi
+    * Chacune des attaques du sort n°2 n'a plus que 35% de chance d'appliquer un marque sur l'ennemi (50% auparavant)
 * Artamiel :
     * La description du sort n°2 a été ajusté
     * Le montant de soin procuré par le sort n°3 passe de 55% à 50% des points de vie maximums de l'allié ciblé.
