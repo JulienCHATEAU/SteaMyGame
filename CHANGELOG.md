@@ -43,3 +43,9 @@ Auteur : Julien CHATEAU
 * Correction d'un bug à cause duquel un personnage KO pouvait recevoir des points de bouclier
 * Thebae :
     * L'affichage de la resistance de l'effet de Marque du sort n°2 a été factoriser pour une meilleur visibilité dans le chat
+
+## 08/09/2018
+* Nephtys :
+    * Correction d'un bug à cause duquel les effets du sort n°3 passait à travers l'immunité
+* Seara :
+    * Correction d'un bug à cause duquel Seara était étourdis après le lancement de sont sort n°4 alors qu'elle possedait une immunité
