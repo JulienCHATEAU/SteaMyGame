@@ -95,7 +95,7 @@ public class Seara extends Personnage {
     degatseffectue[0] = 10000;
     cibles[0].heal(cibles[0].getPdvMax() * 60 / 100);
     cibles[1].heal(cibles[1].getPdvMax() * 60 / 100);
-    this.appliquerEffet(new Etourdissement(2));//1 seul tour d'étourdissement
+    this.appliquerEffet(new Etourdissement(2), 100);//1 seul tour d'étourdissement
     this.setCooldown(3, this.cooldown_max4);
     return degatseffectue;
   }

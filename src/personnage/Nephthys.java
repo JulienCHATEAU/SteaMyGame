@@ -52,44 +52,42 @@ public class Nephthys extends Personnage {
   */
   public int[] sort2(Personnage[] cibles, Personnage[] ennemisCibles) {
     Random r = new Random();
-    int bd = 3;
-    int ah = 3;
-    int bd2 = 3;
-    int ah2 = 3;
+    boolean[][] resi = new boolean[2][2];
+    resi[0][0] = true;
+    resi[0][1] = true;
+    resi[1][0] = true;
+    resi[1][1] = true;
     int[] degatseffectue = new int[2];
     degatseffectue[0] = 0;
     degatseffectue[1] = 0;
-    for (int i = 0; i<3; i++) {
-      degatseffectue[0] += this.getAttaque()*20/100 + this.getPdvMax()*2/100 - cibles[0].getDefense()/10;
-      degatseffectue[1] += this.getAttaque()*20/100 + this.getPdvMax()*2/100 - cibles[1].getDefense()/10;
-      if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
-        cibles[0].appliquerEffet(new BreakDefense(2));
-        bd--;
-      }
-      if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
-        cibles[0].appliquerEffet(new AntiHeal(2));
-        ah--;
-      }
-      if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
-        cibles[1].appliquerEffet(new BreakDefense(2));
-        bd2--;
-      }
-      if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
-        cibles[1].appliquerEffet(new AntiHeal(2));
-        ah2--;
+    for (int i = 0; i<3; i++) {// pour chaques coup du sort (3 coups)
+      for (int j = 0; j<2; j++) {// pour chaques ennemis (2 ennemis)
+        degatseffectue[j] += this.getAttaque()*20/100 + this.getPdvMax()*2/100 - cibles[j].getDefense()/10;//on calcule les dégats
+        if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {//on applique les effets de brk def et anti heal
+          if (cibles[j].possedeEffet(new Immunite(0))) {
+            Combat.ajouterCommentaire("-"+cibles[j].getClass().getName().substring(11)+" est immunisé contre les effets nocifs !");
+          } else {
+            cibles[j].appliquerEffet(new BreakDefense(2));
+            resi[j][0] = true;
+          }
+        }
+        if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
+          if (cibles[j].possedeEffet(new Immunite(0))) {
+            Combat.ajouterCommentaire("-"+cibles[j].getClass().getName().substring(11)+" est immunisé contre les effets nocifs !");
+          } else {
+            cibles[j].appliquerEffet(new AntiHeal(2));
+            resi[j][1] = true;
+          }
+        }
       }
     }
-    if (bd == 3) {
-      Combat.ajouterCommentaire("-"+cibles[0].getClass().getName().substring(11)+" a résisté aux 3 break def !");
-    }
-    if (ah == 3) {
-      Combat.ajouterCommentaire("-"+cibles[0].getClass().getName().substring(11)+" a résisté aux 3 anti-heal !");
-    }
-    if (bd2 == 3) {
-      Combat.ajouterCommentaire("-"+cibles[1].getClass().getName().substring(11)+" a résisté aux 3 break def !");
-    }
-    if (ah2 == 3) {
-      Combat.ajouterCommentaire("-"+cibles[1].getClass().getName().substring(11)+" a résisté aux 3 anti-heal !");
+    for (int k = 0; k<2; k++) {// on regarde si les effets sont passés
+      if (resi[k][0]) {
+        Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 break def !");
+      }
+      if (resi[k][1]) {
+        Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 anti-heal !");
+      }
     }
     this.setCooldown(1, this.cooldown_max2);
     return degatseffectue;
