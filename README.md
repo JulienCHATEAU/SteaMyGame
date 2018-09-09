@@ -10,7 +10,7 @@ Vous devez posséder la version la plus récente de Java, téléchargeable [ici]
 
 ## L'initialisation et le lancement du jeu
 
-Une fois que vous avez téléchargé l'archive *SteaMyGame-master*, il faut tout extraire (**Clique droit sur l'archive** --> **Extraire tout...** --> **Extraire**). Dans le dossier créé, double-cliquer sur le script *launcher* qui initialisera le jeu.
+Une fois que vous avez téléchargé l'archive *SteaMyGame-master*, il faut tout extraire (**Clique droit sur l'archive** --> **Extraire tout...** --> **Extraire**). Dans le dossier créé, double-cliquer sur le script *installer* qui initialisera le jeu.
 
 Vous n'aurez qu'à supprimer le dossier *SteaMyGame-master* qui est maintenant vide et à double-cliquer sur le raccourcis *SteaMyGame.lnk*, fraichement créé sur votre bureau, pour lancer le jeu !
 
