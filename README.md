@@ -23,7 +23,7 @@ Il serait préférable de me contacter (`steamygamecontact@gmail.com`) si une er
 
 ## La compilation
 
-Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait de la manière suivante :
+Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait ainsi :
 
 `$javac -cp bin -d bin -encoding UTF-8 src/X/*.java`  
 (avec X le répertoire dans lequel se trouve la(les) classe(s) que vous avez modifiée(s))
