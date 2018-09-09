@@ -23,7 +23,7 @@ Il serait préférable de me contacter (`steamygamecontact@gmail.com`) si une er
 
 ## La compilation
 
-Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait de la manière suivante :
+Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait ainsi :
 
 `$javac -cp bin -d bin -encoding UTF-8 src/X/*.java`  
 (avec X le répertoire dans lequel se trouve la(les) classe(s) que vous avez modifiée(s))
@@ -123,5 +123,5 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * **Invincibilité** : Vous ne subissez aucun dégat.
 * **Contre-Attaque** : Si vous subissez des dégats (directs) de l'ennemi, vous contre-attaquez avec votre sort n°1.
 
-PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me le partager, je me ferai un plaisir de le corriger
+PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me contacter, je me ferai un plaisir de le corriger
 `steamygamecontact@gmail.com`
