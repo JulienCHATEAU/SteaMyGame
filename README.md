@@ -29,8 +29,8 @@ Si vous êtes dans la capacité de modifier le code source, la compilation de l'
 (avec X le répertoire dans lequel se trouve la(les) classe(s) que vous avez modifiée(s))
 
 Pour compiler tous les fichiers d'un coup (possible seulement sur Linux) :  
-`$shopt -s globstar`
-`$javac -cp bin -d bin -encoding UTF-8 src/**/*.java`
+1. `$shopt -s globstar`
+2. `$javac -cp bin -d bin -encoding UTF-8 src/**/*.java`
 
 ## Les mécaniques du jeu
 
