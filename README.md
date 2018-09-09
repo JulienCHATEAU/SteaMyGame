@@ -8,6 +8,19 @@ __SteaMyGame__
 
 Vous devez posséder la version la plus récente de Java, téléchargeable [ici](https://www.java.com/fr/download/)
 
+## L'initialisation et le lancement du jeu
+
+Une fois que vous avez téléchargé l'archive *SteaMyGame-master*, il faut tout extraire (**Clique droit sur l'archive** --> **Extraire tout...** --> **Extraire**). Dans le dossier créé, double-cliquer sur le script *launcher* qui initialisera le jeu.
+
+Vous n'aurez qu'à supprimer le dossier *SteaMyGame-master* qui est maintenant vide et à double-cliquer sur le raccourcis *SteaMyGame.lnk*, fraichement créé sur votre bureau, pour lancer le jeu !
+
+
+Si le dossier *SteaMyGame-master* n'est pas vide, l'initialisation n'a pas fonctionner mais vous pouvez quand même lancer le jeu avec le raccourcis *SteaMyGame.lnk* (sans icone)
+
+Si le raccourcis n'est pas créer sur votre bureau, Allez dans *Ce PC*, dans l'onglet *Périphériques et lecteurs*, allez dans *OS (C:)*. Dans le dossier *SteaMyGame*, vous trouverez le raccourcis (avec icone) que vous pourrez récupérer.
+
+Il serait préférable de me contacter (`steamygamecontact@gmail.com`) si une erreur se produit pour que je puisse adapter/corriger mon launcher d'initialisation.
+
 ## La compilation
 
 Si vous êtes dans la capacité de modifier le code source, la compilation de l'ensemble des classes se fait de la manière suivante :
@@ -18,20 +31,6 @@ Si vous êtes dans la capacité de modifier le code source, la compilation de l'
 Pour compiler tous les fichiers d'un coup (possible seulement sur Linux) :  
 `$shopt -s globstar`
 `$javac -cp bin -d bin -encoding UTF-8 src/**/*.java`
-
-
-
-
-## L'initialisation et le lancement du jeu
-
-Une fois que vous avez téléchargé l'archive *SteaMyGame-master*, il faut tout extraire (**Clique droit sur l'archive** --> **Extraire tout...** --> **Extraire**). Dans le dossier créé, double-cliquer sur le script *launcher* qui initialisera le jeu.
-
-Si tout ce passe bien, vous n'aurez qu'à supprimer le dossier *SteaMyGame-master* qui est maintenant vide et à double-cliquer sur le raccourcis *SteaMyGame.lnk*, fraichement créé sur votre bureau, pour lancer le jeu !
-
-
-Si le dossier *SteaMyGame-master* n'est pas vide, l'initialisation n'a pas fonctionner mais vous pouvez quand même lancer le jeu avec le raccourcis *SteaMyGame.lnk* (sans icone)
-
-Si le raccourcis n'est pas créer sur votre bureau, Allez dans *Ce PC*, dans l'onglet *Périphériques et lecteurs*, allez dans *OS (C:)*. Dans le dossier *SteaMyGame*, vous trouverez le raccourcis (avec icone) que vous pourrez récupérer.
 
 ## Les mécaniques du jeu
 
