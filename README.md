@@ -123,5 +123,5 @@ Plus vous avancerez dans la tour, plus les monstres seront fort. Les combats se 
 * **Invincibilité** : Vous ne subissez aucun dégat.
 * **Contre-Attaque** : Si vous subissez des dégats (directs) de l'ennemi, vous contre-attaquez avec votre sort n°1.
 
-PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me le partager, je me ferai un plaisir de le corriger
+PS : Si vous remarquez quelque chose semblant être erroné n'hésitez pas à me contacter, je me ferai un plaisir de le corriger
 `steamygamecontact@gmail.com`
