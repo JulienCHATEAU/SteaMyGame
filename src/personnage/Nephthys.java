@@ -76,7 +76,7 @@ public class Nephthys extends Personnage {
         }
         if (r.nextInt(100) < 30+this.sort4(cibles, ennemisCibles)[0]) {
           if (cibles[j].possedeEffet(new Immunite(0))) {
-            immun[1] = false;
+            immun[1] = true;
           } else {
             cibles[j].appliquerEffet(new AntiHeal(2));
             resi[j][1] = false;
@@ -87,12 +87,13 @@ public class Nephthys extends Personnage {
     for (int k = 0; k<2; k++) {// on regarde si les effets sont passés
       if (immun[k]) {
         Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" est immunisé contre les effets nocifs !");
-      }
-      if (resi[k][0]) {
-        Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 break def !");
-      }
-      if (resi[k][1]) {
-        Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 anti-heal !");
+      } else {
+        if (resi[k][0]) {
+          Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 break def !");
+        }
+        if (resi[k][1]) {
+          Combat.ajouterCommentaire("-"+cibles[k].getClass().getName().substring(11)+" a résisté aux 3 anti-heal !");
+        }
       }
     }
     this.setCooldown(1, this.cooldown_max2);
