@@ -2,7 +2,7 @@ Auteur : Julien CHATEAU
 
 _Ce document est à lire attentivement et vous permettra de comprendre le fonctionnement de ce jeu._
 
-#__SteaMyGame__
+# __SteaMyGame__
 
 ## Prérequis
 
