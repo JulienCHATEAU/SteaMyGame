@@ -6,7 +6,7 @@ _Ce document est à lire attentivement et vous permettra de comprendre le foncti
 
 ## Prérequis
 
-Vous devez posséder la version la plus récente de Java, téléchargeable [ici](https://www.java.com/fr/download/)
+Vous devez posséder la version la plus récente de Java, téléchargeable gratuitement [ici](https://www.java.com/fr/download/)
 
 ## L'initialisation et le lancement du jeu
 
