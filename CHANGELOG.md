@@ -49,3 +49,7 @@ Auteur : Julien CHATEAU
     * Correction d'un bug à cause duquel les effets du sort n°3 passait à travers l'immunité
 * Seara :
     * Correction d'un bug à cause duquel Seara était étourdis après le lancement de sont sort n°4 alors qu'elle possedait une immunité
+
+## 10/09/2018
+* Nephtys :
+    * Correction d'un bug d'affichage dans le chat lors du lancement du sort n°3
