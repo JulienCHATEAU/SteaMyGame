@@ -79,6 +79,20 @@ public class Application {
     System.out.println(r4ter);
   }
 
+  public static void runScript(String scriptName) throws IOException, InterruptedException {
+    ProcessBuilder processBuilder = new ProcessBuilder("./"+scriptName);
+    //Sets the source and destination for subprocess standard I/O to be the same as those of the current Java process.
+    processBuilder.inheritIO();
+    Process process = processBuilder.start();
+
+    int exitValue = process.waitFor();
+    if (exitValue != 0) {
+        // check for errors
+        new BufferedInputStream(process.getErrorStream());
+        throw new RuntimeException("execution of script failed!");
+    }
+}
+
   public static String getTextFromFile(String path) {
     String res = "";
     try {

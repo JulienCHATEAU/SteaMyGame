@@ -23,18 +23,35 @@ public class Accueil extends JPanel {
     this.setLayout(new BorderLayout());
     JPanel steamygame = new JPanel();
     steamygame.setBorder(BorderFactory.createMatteBorder(8, 8, 8, 2, Color.decode("#C3C1BF")));
+    steamygame.setBackground(Color.decode("#F2E5CF"));
     Font font = new Font("Arial", Font.BOLD ,20);
-    steamygame.setLayout(new GridBagLayout());
-    JLabel truc = new JLabel();
+    steamygame.setLayout(null);
+    JButton maj = new JButton("Mise à jour");
+    maj.setBackground(Color.decode("#C3C1BF"));
+    maj.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        jeu.dispose();
+        try {
+          Application.runScript("tmp.bat");
+        } catch (IOException | InterruptedException e2) {
+          e2.printStackTrace();
+        }
+      }
+    });
+    steamygame.add(maj);
+    Dimension size = maj.getPreferredSize();
+    maj.setBounds(24, 24, size.width, size.height);
+    JLabel imageAccueil = new JLabel();
     try {
       BufferedImage myPicture = ImageIO.read(new File("img/imageAccueil.jpg"));
-      truc = new JLabel(new ImageIcon(myPicture));
+      imageAccueil = new JLabel(new ImageIcon(myPicture));
     } catch (IOException e) {
     }
-    truc.setBackground(Color.decode("#F2E5CF"));
-    // truc.setBorder(BorderFactory.createMatteBorder(4, 4, 4, 4, Color.decode("#C3C1BF")));
-    steamygame.add(truc);
-    steamygame.setBackground(Color.decode("#F2E5CF"));
+    imageAccueil.setBackground(Color.decode("#F2E5CF"));
+    steamygame.add(imageAccueil);
+    size = imageAccueil.getPreferredSize();
+    Dimension screen = this.jeu.getPreferredSize();
+    imageAccueil.setBounds((screen.width*80/100-size.width)/2+8, (screen.height-size.height)/2+8, size.width, size.height);
 
     JPanel droite = new JPanel();
     droite.setBorder(BorderFactory.createMatteBorder(8, 2, 8, 8, Color.decode("#C3C1BF")));

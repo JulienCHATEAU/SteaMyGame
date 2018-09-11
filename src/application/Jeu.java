@@ -122,6 +122,7 @@ public class Jeu extends JFrame {
     System.out.println("Screen height : "+screen.height);
     this.setPreferredSize(new Dimension(jwidth, jheight));
     this.setLocation((screen.width - this.getPreferredSize().width)/2,(screen.height - this.getPreferredSize().height)/2);
+    this.setResizable(false);
     this.setContentPane(this.tout);
     this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
     this.pack();
