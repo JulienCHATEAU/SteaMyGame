@@ -1,2 +1,2 @@
-move maj.bat D:\
-bash D:\maj.bat
+move maj.bat ..
+bash ..\maj.bat
