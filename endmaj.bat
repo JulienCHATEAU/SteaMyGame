@@ -1,1 +1,1 @@
-rm -f ..\\maj.bat
+del /q ..\\maj.bat
