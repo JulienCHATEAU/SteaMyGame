@@ -1,3 +1,4 @@
+copy img\\maj* D:\
 sleep 0.5
 java -cp bin application.ChargementMaj &
 cp -r save \\
@@ -8,7 +9,7 @@ cd SteaMyGame
 rm -rf save
 cp -r \\save .
 rm -rf \\save
-taskkill /f /im javaw
+taskkill //f //im javaw
 sleep 0.5
 java -cp bin application.Application &
 bash endmaj.bat

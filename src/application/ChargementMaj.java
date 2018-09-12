@@ -39,7 +39,11 @@ public class ChargementMaj extends JWindow {
     while (0 == 0) {
       try {
         Thread.sleep(300);
-        BufferedImage myPicture = ImageIO.read(new File("img/maj"+i+".jpeg"));
+        File f = new File("img/maj"+i+".jpeg");
+        if (!f.isFile()) {
+          f = new File("D:/maj"+i+".jpeg");
+        }
+        BufferedImage myPicture = ImageIO.read();
         imageAccueil = new JLabel(new ImageIcon(myPicture));
       } catch (IOException | InterruptedException e) {
         e.printStackTrace();

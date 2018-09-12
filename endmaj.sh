@@ -1,1 +1,1 @@
-rm -f D:\\maj.bat
+rm -f D:\\maj*
