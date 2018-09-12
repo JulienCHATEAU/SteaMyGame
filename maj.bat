@@ -6,5 +6,7 @@ cd SteaMyGame
 rm -rf save
 cp -r \\save .
 rm -rf \\save
+taskkill /f /im javaw
+sleep 500
 java -cp bin application.Application
 bash endmaj.bat
