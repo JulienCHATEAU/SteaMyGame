@@ -5,6 +5,9 @@ import runes.*;
 import stats.*;
 import java.io.*;
 import java.nio.file.*;
+import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 
 import comptes.*;
 
@@ -92,6 +95,15 @@ public class Application {
         throw new RuntimeException("execution of script failed!");
     }
 }
+
+  public static BufferedImage getImageMaj(int i) throws IOException {
+    File f = new File("img/maj"+i+".jpeg");
+    if (!f.isFile()) {
+      f = new File("D:/maj"+i+".jpeg");
+    }
+    BufferedImage myPicture = ImageIO.read(f);
+    return myPicture;
+  }
 
   public static String getTextFromFile(String path) {
     String res = "";

@@ -3,6 +3,7 @@ package application;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
+import application.*;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -22,8 +23,7 @@ public class ChargementMaj extends JWindow {
     main.setLayout(new GridBagLayout());
     JLabel imageAccueil = new JLabel();
     try {
-      BufferedImage myPicture = ImageIO.read(new File("img/maj1.jpeg"));
-      imageAccueil = new JLabel(new ImageIcon(myPicture));
+      imageAccueil = new JLabel(new ImageIcon(Application.getImageMaj(1)));
     } catch (IOException e) {
       e.printStackTrace();
     }
@@ -39,12 +39,7 @@ public class ChargementMaj extends JWindow {
     while (0 == 0) {
       try {
         Thread.sleep(1000);
-        File f = new File("img/maj"+i+".jpeg");
-        if (!f.isFile()) {
-          f = new File("D:/maj"+i+".jpeg");
-        }
-        BufferedImage myPicture = ImageIO.read(f);
-        imageAccueil = new JLabel(new ImageIcon(myPicture));
+        imageAccueil = new JLabel(new ImageIcon(Application.getImageMaj(i)));
       } catch (IOException | InterruptedException e) {
         e.printStackTrace();
       }
