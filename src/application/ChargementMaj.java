@@ -30,7 +30,7 @@ public class ChargementMaj extends JWindow {
     imageAccueil.setBackground(Color.decode("#F2E5CF"));
     main.add(imageAccueil);
     Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-    this.setPreferredSize(new Dimension(500, 320));
+    this.setPreferredSize(new Dimension(550, 320));
     this.setLocation((screen.width - this.getPreferredSize().width)/2,(screen.height - this.getPreferredSize().height)/2);
     this.setContentPane(main);
     this.pack();
@@ -38,12 +38,12 @@ public class ChargementMaj extends JWindow {
     int i = 2;
     while (0 == 0) {
       try {
-        Thread.sleep(300);
+        Thread.sleep(1000);
         File f = new File("img/maj"+i+".jpeg");
         if (!f.isFile()) {
           f = new File("D:/maj"+i+".jpeg");
         }
-        BufferedImage myPicture = ImageIO.read();
+        BufferedImage myPicture = ImageIO.read(f);
         imageAccueil = new JLabel(new ImageIcon(myPicture));
       } catch (IOException | InterruptedException e) {
         e.printStackTrace();
