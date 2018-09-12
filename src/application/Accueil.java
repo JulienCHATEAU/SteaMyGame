@@ -33,11 +33,9 @@ public class Accueil extends JPanel {
         jeu.dispose();
         try {
           Application.runScript("tmp.bat");
-          Thread.sleep(500);
         } catch (IOException | InterruptedException e2) {
           e2.printStackTrace();
         }
-        ChargementMaj chargementMaj = new ChargementMaj();
       }
     });
     steamygame.add(maj);

@@ -10,6 +10,10 @@ import java.awt.image.BufferedImage;
 
 public class ChargementMaj extends JWindow {
 
+  public static void main(String[] args) {
+    ChargementMaj chargementMaj = new ChargementMaj();
+  }
+
   public ChargementMaj() {
     super();
     JPanel main = new JPanel();

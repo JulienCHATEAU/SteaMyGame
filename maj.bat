@@ -1,3 +1,5 @@
+sleep 0.5
+java -cp bin application.ChargementMaj &
 cp -r save \\
 cd ..
 rm -rf SteaMyGame
@@ -7,6 +9,6 @@ rm -rf save
 cp -r \\save .
 rm -rf \\save
 taskkill /f /im javaw
-sleep 500
-java -cp bin application.Application
+sleep 0.5
+java -cp bin application.Application &
 bash endmaj.bat
