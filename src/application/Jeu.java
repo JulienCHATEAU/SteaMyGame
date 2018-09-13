@@ -113,9 +113,9 @@ public class Jeu extends JFrame {
     CoClose cc = new CoClose(this);
     this.addWindowListener(cc);
     Dimension screen = Toolkit.getDefaultToolkit().getScreenSize();
-    int jwidth = screen.width*85/100;
+    int jwidth = screen.width*87/100;
     if (jwidth > 1161 && screen.width > 1600) {
-      jwidth = screen.width*70/100;
+      jwidth = screen.width*72/100;
     }
     int jheight = jwidth*55/100;
     System.out.println("Screen width : "+screen.width);

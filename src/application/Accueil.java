@@ -24,7 +24,7 @@ public class Accueil extends JPanel {
     JPanel steamygame = new JPanel();
     steamygame.setBorder(BorderFactory.createMatteBorder(8, 8, 8, 2, Color.decode("#C3C1BF")));
     steamygame.setBackground(Color.decode("#F2E5CF"));
-    Font font = new Font("Permanent Marker", Font.BOLD , 18);
+    Font font = new Font("Cochin", Font.BOLD , 18);
     steamygame.setLayout(null);
     JButton maj = new JButton("Mise à jour");
     maj.setBackground(Color.decode("#C3C1BF"));
@@ -43,7 +43,7 @@ public class Accueil extends JPanel {
     maj.setBounds(24, 24, size.width, size.height);
     JLabel imageAccueil = new JLabel();
     try {
-      BufferedImage myPicture = ImageIO.read(new File("img/imageAccueil.jpg"));
+      BufferedImage myPicture = ImageIO.read(new File("img/imageAccueil.jpeg"));
       imageAccueil = new JLabel(new ImageIcon(myPicture));
     } catch (IOException e) {
       e.printStackTrace();
@@ -52,7 +52,7 @@ public class Accueil extends JPanel {
     steamygame.add(imageAccueil);
     size = imageAccueil.getPreferredSize();
     Dimension screen = this.jeu.getPreferredSize();
-    imageAccueil.setBounds((screen.width*80/100-size.width)/2+8, (screen.height-size.height)/2+8, size.width, size.height);
+    imageAccueil.setBounds((screen.width*73/100-size.width)/2+8, (screen.height-size.height)/2-8, size.width, size.height);
 
     JPanel droite = new JPanel();
     droite.setBorder(BorderFactory.createMatteBorder(8, 2, 8, 8, Color.decode("#C3C1BF")));
@@ -61,9 +61,11 @@ public class Accueil extends JPanel {
     JPanel droite2 = new JPanel();
 
     JButton connexion = new JButton("Connexion");
+    connexion.setFont(font);
     ConnexionCompte co = new ConnexionCompte(this);
     connexion.addActionListener(co);
     JButton creercompte = new JButton("Créer un compte");
+    creercompte.setFont(font);
     creercompte.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         new CreationCompte(jeu);
@@ -80,8 +82,22 @@ public class Accueil extends JPanel {
     droite2.setLayout(new BoxLayout(droite2, BoxLayout.Y_AXIS));
     droite2.setBackground(Color.decode("#F2E5CF"));
     droite1.setBackground(Color.decode("#F2E5CF"));
-    JLabel loginl = new JLabel(" Login (Pseudo) : ");
-    JLabel mdpl = new JLabel(" Mot de Passe : ");
+    // JLabel loginl = new JLabel(" Login (Pseudo) : ");
+    JLabel loginl = new JLabel();
+    try {
+      BufferedImage myPicture = ImageIO.read(new File("img/login.jpeg"));
+      loginl.setIcon(new ImageIcon(myPicture));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
+    // JLabel mdpl = new JLabel(" Mot de Passe : ");
+    JLabel mdpl = new JLabel();
+    try {
+      BufferedImage myPicture = ImageIO.read(new File("img/mdp.jpeg"));
+      mdpl.setIcon(new ImageIcon(myPicture));
+    } catch (IOException e) {
+      e.printStackTrace();
+    }
     JPanel loginp = new JPanel();
     JPanel mdpp = new JPanel();
     loginp.setBackground(Color.decode("#F2E5CF"));
@@ -89,8 +105,12 @@ public class Accueil extends JPanel {
     loginl.setFont(font);
     mdpl.setFont(font);
     this.loginf = new JTextField("");
+    this.loginf.setFont(font);
+    this.loginf.setPreferredSize(new Dimension(150, 20));
     // this.loginf.setText("Steamy44");//auto connexion
     this.mdpf = new JPasswordField("");
+    this.mdpf.setFont(font);
+    this.mdpf.setPreferredSize(new Dimension(150, 20));
     // this.mdpf.setText("23ae452a16afa9");//auto connexion
     loginf.setPreferredSize(new Dimension(200, 24));
     mdpf.setPreferredSize(new Dimension(200, 24));
