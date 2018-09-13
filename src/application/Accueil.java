@@ -24,7 +24,7 @@ public class Accueil extends JPanel {
     JPanel steamygame = new JPanel();
     steamygame.setBorder(BorderFactory.createMatteBorder(8, 8, 8, 2, Color.decode("#C3C1BF")));
     steamygame.setBackground(Color.decode("#F2E5CF"));
-    Font font = new Font("Arial", Font.BOLD ,20);
+    Font font = new Font("Permanent Marker", Font.BOLD , 18);
     steamygame.setLayout(null);
     JButton maj = new JButton("Mise à jour");
     maj.setBackground(Color.decode("#C3C1BF"));
@@ -80,12 +80,14 @@ public class Accueil extends JPanel {
     droite2.setLayout(new BoxLayout(droite2, BoxLayout.Y_AXIS));
     droite2.setBackground(Color.decode("#F2E5CF"));
     droite1.setBackground(Color.decode("#F2E5CF"));
-    JLabel loginl = new JLabel("Login (Pseudo) : ");
-    JLabel mdpl = new JLabel("Mot de Passe : ");
+    JLabel loginl = new JLabel(" Login (Pseudo) : ");
+    JLabel mdpl = new JLabel(" Mot de Passe : ");
     JPanel loginp = new JPanel();
     JPanel mdpp = new JPanel();
     loginp.setBackground(Color.decode("#F2E5CF"));
     mdpp.setBackground(Color.decode("#F2E5CF"));
+    loginl.setFont(font);
+    mdpl.setFont(font);
     this.loginf = new JTextField("");
     // this.loginf.setText("Steamy44");//auto connexion
     this.mdpf = new JPasswordField("");
@@ -95,7 +97,6 @@ public class Accueil extends JPanel {
     droite2.add(loginl);
     loginp.add(loginf);
     droite2.add(loginp);
-    // droite2.add(new JLabel(" "));
     droite2.add(mdpl);
     mdpp.add(mdpf);
     droite2.add(mdpp);
