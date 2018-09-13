@@ -2,6 +2,7 @@ cp img\\maj1.jpeg ..\\SteaMyGame_temp
 cp img\\maj2.jpeg ..\\SteaMyGame_temp
 cp img\\maj3.jpeg ..\\SteaMyGame_temp
 java -cp bin application.ChargementMaj &
+sleep 3
 cp -r save \\SteaMyGame_temp
 cd ..
 rm -rf SteaMyGame
