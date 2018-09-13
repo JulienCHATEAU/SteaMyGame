@@ -1,2 +1,5 @@
-move maj.bat D:\
-bash D:\maj.bat
+If not exist "..\\SteaMyGame_temp" (
+  mkdir ..\\SteaMyGame_temp
+)
+copy maj.bat ..\\SteaMyGame_temp
+bash ..\\SteaMyGame_temp\maj.bat

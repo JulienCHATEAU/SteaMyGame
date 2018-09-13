@@ -99,7 +99,7 @@ public class Application {
   public static BufferedImage getImageMaj(int i) throws IOException {
     File f = new File("img/maj"+i+".jpeg");
     if (!f.isFile()) {
-      f = new File("D:/maj"+i+".jpeg");
+      f = new File("../SteaMyGame_temp/maj"+i+".jpeg");
     }
     BufferedImage myPicture = ImageIO.read(f);
     return myPicture;
