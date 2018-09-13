@@ -1,6 +1,7 @@
 package application;
 
 import java.util.*;
+import java.awt.*;
 import runes.*;
 import stats.*;
 import java.io.*;
@@ -12,6 +13,8 @@ import java.awt.image.BufferedImage;
 import comptes.*;
 
 public class Application {
+
+  public static Font font = new Font("Cochin", Font.BOLD , 18);
 
   public static void main(String[] args) {
     Jeu j = new Jeu("SteaMyGame");

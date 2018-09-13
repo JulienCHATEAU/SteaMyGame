@@ -48,6 +48,7 @@ public class Inventaire extends JPanel {
     this.setBackground(Color.decode("#F2E5CF"));
     Font font14 = new Font("Arial", Font.BOLD , 14);
     Font font18 = new Font("Arial", Font.BOLD , 18);
+    Font font23 = new Font("Arial", Font.BOLD , 23);
 
 //Construction panel de gauche :
     JPanel gauche = new JPanel();
@@ -86,27 +87,26 @@ public class Inventaire extends JPanel {
     int vitbonus = this.perso.getStatsSuppl(1);
     int txcrbonus = this.perso.getStatsSuppl(4);
     int dgcrbonus = this.perso.getStatsSuppl(5);
-    this.hp = new JLabel("    Hp :                     "+this.perso.getPdv()+" (+"+hpbonus+")");
-    this.attaque = new JLabel("   Attaque :            "+this.perso.getAttaque()+" (+"+attbonus+")");
-    this.defense = new JLabel("   Défense :           "+this.perso.getDefense()+" (+"+defbonus+")");
-    this.vitesse = new JLabel("   Vitesse :             "+this.perso.getVitesse()+" (+"+vitbonus+")");
-    this.tx_crit = new JLabel("   Taux Crit. :          15% (+"+txcrbonus+"%)");
-    this.dgts_crit = new JLabel("   Dégats Crit. :      25% (+"+dgcrbonus+"%)");
+    this.hp = new JLabel("    Hp :                "+this.perso.getPdv()+" (+"+hpbonus+")");
+    this.attaque = new JLabel("   Attaque :       "+this.perso.getAttaque()+" (+"+attbonus+")");
+    this.defense = new JLabel("   Défense :      "+this.perso.getDefense()+" (+"+defbonus+")");
+    this.vitesse = new JLabel("   Vitesse :        "+this.perso.getVitesse()+" (+"+vitbonus+")");
+    this.tx_crit = new JLabel("   Taux Crit. :     15% (+"+txcrbonus+"%)");
+    this.dgts_crit = new JLabel("   Dégats Crit. : 25% (+"+dgcrbonus+"%)");
     carac.add(new JLabel(" "));
     this.argentl = new JLabel("    Argent : "+this.jeu.getCompte().getArgent()+" $teamy");
     // carac.add(this.argentl);
     // carac.add(new JLabel(" "));
     String space = "";
-    int tailleSpace = 16 - (this.jeu.getCompte().getLogin().length()/2);
+    int tailleSpace = 10 - (this.jeu.getCompte().getLogin().length()/2);
     for (int i = 0; i<tailleSpace; i++) {
       space += " ";
     }
     JLabel pseudo = new JLabel(space + this.jeu.getCompte().getLogin());
-    pseudo.setFont(font18);
+    pseudo.setFont(font23);
     carac.add(pseudo);
     carac.add(new JLabel(" "));
     JLabel titre = new JLabel("   "+"Caractéristiques"+"                 ");
-    titre.setFont(font14);
     carac.add(titre);
     carac.add(new JLabel(" "));
     this.nomPerso = new JLabel("    "+this.perso.getClass().getName().substring(11)+" : ");
@@ -123,6 +123,15 @@ public class Inventaire extends JPanel {
     carac.add(new JLabel(" "));
     carac.add(new JLabel(" "));
     carac.add(this.argentl);
+    titre.setFont(font14);
+    this.argentl.setFont(font14);
+    this.nomPerso.setFont(font14);
+    this.hp.setFont(font14);
+    this.attaque.setFont(font14);
+    this.defense.setFont(font14);
+    this.vitesse.setFont(font14);
+    this.tx_crit.setFont(font14);
+    this.dgts_crit.setFont(font14);
     gauche.add(carac, BorderLayout.CENTER);
 
     this.add(gauche, BorderLayout.WEST);
@@ -272,7 +281,7 @@ public class Inventaire extends JPanel {
     inv.setBackground(Color.decode("#F2E5CF"));
     inv.setLayout(new GridBagLayout());
     JLabel titre3 = new JLabel("Inventaire");
-    titre3.setFont(font14);
+    titre3.setFont(Application.font);
     inv.add(titre3);
     bot.add(inv, BorderLayout.NORTH);
     bot.add(jtp, BorderLayout.CENTER);
@@ -287,7 +296,7 @@ public class Inventaire extends JPanel {
   runes.setLayout(new BorderLayout());
   JPanel tmp1 = new JPanel();
   JLabel titre2 = new JLabel("Runes");
-  titre2.setFont(font14);
+  titre2.setFont(Application.font);
   tmp1.add(titre2);
   tmp1.setBackground(Color.decode("#F2E5CF"));
   tmp1.setPreferredSize(new Dimension(150, 50));
@@ -333,13 +342,16 @@ public class Inventaire extends JPanel {
   next.setBackground(Color.decode("#F2E5CF"));
   next.setBorder(BorderFactory.createMatteBorder(0, 2, 2, 0, Color.decode("#C3C1BF")));
   JButton continuer = new JButton("Continuer");
+  continuer.setFont(Application.font);
   continuer.setBackground(Color.decode("#C3C1BF"));
   JLabel aletage = new JLabel("à l'étage : ");
+  aletage.setFont(Application.font);
   Integer[] model = new Integer[35];
   for (int i = 0; i<35; i++) {
     model[i] = i+1;
   }
   this.etage = new JComboBox<Integer>(model);
+  this.etage.setFont(Application.font);
   if (this.jeu.getCompte().getEtage() == -35) {
     this.etage.setSelectedIndex(34);
   } else {
@@ -441,12 +453,12 @@ public class Inventaire extends JPanel {
     int vitbonus = this.perso.getStatsSuppl(1);
     int txcrbonus = this.perso.getStatsSuppl(4);
     int dgcrbonus = this.perso.getStatsSuppl(5);
-    this.hp.setText("    Hp :                     "+this.perso.getPdv()+" (+"+hpbonus+")");
-    this.attaque.setText("   Attaque :            "+this.perso.getAttaque()+" (+"+attbonus+")");
-    this.defense.setText("   Défense :           "+this.perso.getDefense()+" (+"+defbonus+")");
-    this.vitesse.setText("   Vitesse :             "+this.perso.getVitesse()+" (+"+vitbonus+")");
-    this.tx_crit.setText("   Taux Crit. :          15% (+"+txcrbonus+"%)");
-    this.dgts_crit.setText("   Dégats Crit. :      25% (+"+dgcrbonus+"%)");
+    this.hp.setText("    Hp :                 "+this.perso.getPdv()+" (+"+hpbonus+")");
+    this.attaque.setText("   Attaque :        "+this.perso.getAttaque()+" (+"+attbonus+")");
+    this.defense.setText("   Défense :       "+this.perso.getDefense()+" (+"+defbonus+")");
+    this.vitesse.setText("   Vitesse :         "+this.perso.getVitesse()+" (+"+vitbonus+")");
+    this.tx_crit.setText("   Taux Crit. :      15% (+"+txcrbonus+"%)");
+    this.dgts_crit.setText("   Dégats Crit. :  25% (+"+dgcrbonus+"%)");
   }
 
   public void rafraichirArgent(Jeu jeu) {

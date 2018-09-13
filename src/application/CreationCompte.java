@@ -24,7 +24,9 @@ public class CreationCompte extends JFrame {
     haut.setLayout(new GridBagLayout());
     GridBagConstraints c = new GridBagConstraints();
     c.insets = new Insets(5,0,5,0);
-    haut.add(new JLabel("Créer votre compte : "), c);
+    JLabel creerCompte = new JLabel("Créer votre compte : ");
+    creerCompte.setFont(Application.font);
+    haut.add(creerCompte, c);
     principal.add(haut, BorderLayout.NORTH);
 
     JPanel centre = new JPanel();
@@ -32,8 +34,10 @@ public class CreationCompte extends JFrame {
     centre.setLayout(new BoxLayout(centre, BoxLayout.Y_AXIS));
     centre.setBackground(Color.decode("#F2E5CF"));
 
-    JLabel loginl = new JLabel("Login (Pseudo) : ");
+    JLabel loginl = new JLabel("Login : ");
+    loginl.setFont(Application.font);
     JLabel mdpl = new JLabel("Mot de Passe : ");
+    mdpl.setFont(Application.font);
     JPanel loginp = new JPanel();
     JPanel mdpp = new JPanel();
     loginp.setBackground(Color.decode("#F2E5CF"));
